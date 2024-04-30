@@ -10,10 +10,15 @@ La visualisation de données en Python, c'est l'art de représenter des informat
    Pour faire de la Data Visualisation de nos données nous avons besoins d'importer "Matplotlib"
 
  il ets possible de faire plusieurs graphiques differents:
-  - histogramme = "hist" -> plt.hist("les données utile sur les axes")
-  - diagramme en barre = "bar" -> plt.bar("les données utile sur les axes")
-  - boite a moustache =" boxplot" -> plt.boxplot("les données utile sur les axes")
-  - nuage de point = "scatterplot" -> plt.scatter("les données utile sur les axes")
+
+- histogramme = "hist" -> plt.hist("les données utile sur les axes")
+
+- diagramme en barre = "bar" -> plt.bar("les données utile sur les axes")
+
+- boite a moustache =" boxplot" -> plt.boxplot("les données utile sur les axes")
+
+- nuage de point = "scatterplot" -> plt.scatter("les données utile sur les axes")
+
 
   Pour les graphiques d'un dataframe il faut mettre "df.plot.(plus le nom du graphique besoins)", par exemple pour une boite a moustache on mettra "df.plot.box".
 

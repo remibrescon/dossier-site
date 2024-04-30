@@ -24,19 +24,6 @@ Structures de données principales :
 
 Pandas est largement utilisé dans le domaine de la science des données, de l'analyse de données, de la finance et de nombreux autres domaines où la manipulation et l'analyse de données sont nécessaires.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Pandas est un bibliotheque utiliser dans python utilisé pour l’analyse de donnée. Elle offre des structures de données flexibles et puissantes pour travailler avec des données tabulaires et temporelles. Voici quelques points clés à retenir sur Pandas :
 
 Structures de données principales : - DataFrame : Un tableau bidimensionnel avec des lignes et des colonnes étiquetées, similaire à une feuille de calcul Excel ou à une table SQL. - Series : Une structure unidimensionnelle similaire à un tableau ou une liste, mais avec des fonctionnalités supplémentaires, comme un index.
