@@ -1,0 +1,1 @@
+<iframe src="exercice/example(1).html" width="800px" height="600px"></iframe>

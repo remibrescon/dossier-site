@@ -1,0 +1,30 @@
+project:  
+  type: website
+
+execute: 
+  freeze: auto 
+
+website:
+  title: "Module et bibliotheque"
+  navbar:
+    left:
+      - href: Sommaire.qmd
+        text: Home
+      - href: introduction a numpy.qmd
+        text: introduction a numpy
+      - href: Introduction a Pandas.qmd
+        text: Introduction a Pandas
+      - href: Data visualisation.qmd
+        text: Data visualisation 
+      - href: Exercice.qmd
+        text: exercice
+      - href: Corrige.qmd
+        text: Corrige    
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+

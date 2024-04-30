@@ -1,0 +1,115 @@
+---
+title: "Numpy?"
+---
+**introduction à numpy**
+
+NumPy est une bibliothèque Python utilisée principalement pour le calcul numérique.
+ Elle fournit des structures de données de base telles que les tableaux multidimensionnels (ndarrays), ainsi que des fonctions permettant d'effectuer des opérations mathématiques et statistiques sur ces tableaux. Voici un résumé de ses principales fonctionnalités et utilisations :
+
+    Tableaux multidimensionnels(ndarrays) :
+    NumPy permet de créer et de manipuler des tableaux efficacement.
+    Ces tableaux sont plus performants que les listes Python
+    pour le stockage de données numériques
+
+    Opérations mathématiques et statistiques :
+    NumPy fournit beaucoup de fonctions pour effectuer des opérations mathématiques 
+    et statistiques sur les tableaux, telles que la somme, la moyenne, l'écart-type, etc.
+
+    Broadcasting :
+    NumPy utilise le broadcasting pour effectuer des opérations 
+    sur des tableaux de formes différentes de manière transparente. 
+    Cela permet d'écrire du code plus concis et plus lisible.
+
+    Intégration avec d'autres bibliothèques :
+    NumPy est souvent utilisé en conjonction avec d'autres bibliothèques 
+    Python telles que Matplotlib(pour la visualisation de données),
+    SciPy (pour les calculs scientifiques avancés), et Pandas (pour l'analyse de données).
+
+    Traitement d'images et de sons :
+    NumPy est largement utilisé pour le traitement d'images 
+    et de sons en raison de sa capacité à manipuler efficacement des tableaux multidimensionnels.
+
+En résumé, NumPy est une bibliothèque essentielle pour les applications nécessitant 
+des calculs numériques rapides et efficaces en Python, tels que le calcul scientifique,
+l'apprentissage automatique, l'analyse de données, etc.
+
+**mise a pratique numpy:**
+Pour commencer avec numpy vous aurez besoin de l'installer, pour cela il faudra :
+              "pip install numpy" Dans le terminal
+Une fois installé on va devoir l'importer dans python:
+              "import numpy as np"
+
+Les tableaux (en anglais, array) peuvent être créés avec numpy.array(). On utilise des crochets pour délimiter les listes d’éléments dans les tableaux.
+
+```{python}
+# pip install numpy
+import numpy as np
+A= np.array([2,6,3,9])
+print(A)
+```
+
+il est possible de crée un tableau 2D:
+
+```{python}
+b = np.array([[1, 3, 6], [2, 4, 5]])
+print(b)
+```
+
+On peut crée des tableau avec numpy en utilisant:
+               np.random.randint
+
+```{python}
+c = np.random.randint(low=0, high=10, size=(10, 5))
+print(c)
+
+```
+
+On peut crée créer des tableaux avec des valeurs dans un intervalle spécifié
+en utilisant La fonction: `numpy.arange` 
+
+```{python}
+d = np.arange(0, 100, 3)
+print(d)
+```
+
+on peut utiliser plusieurs fonction arithmetique,
+"np.add(),np.subtract(),np.multiply(),np.divide(),np.power()"
+voici 2 example:
+
+multiplication
+```{python}
+a = np.array([1, 2, 3])
+result = np.multiply(a, 5)
+print(result) 
+
+b=np.array([1,4,6])
+result= np.subtract(b,5)
+print(result)
+```
+
+Nous pouvons aussi utiliser la trigonometrie:
+          "np.sin(),np.cos(),np.tan()"
+
+```{python}
+angles = np.array([0, np.pi/2, np.pi])
+sin_values = np.tan(angles)
+print(sin_values)  
+```
+
+Pour les fonction statistique nous utilisons:
+         np.mean(),np.median(),np.std()
+         
+```{python}
+E = np.array([2, 6, 7, 10])
+E = np.mean(E)
+print(E) 
+```
+
+Pour en finir avec numpy nous pouvons arrondir les nombres avec:
+      np.round(),np.floor(),np.ceil()
+
+```{python}
+F= np.array([np.pi*2,np.pi])
+F = np.round(F)
+print(F) 
+```

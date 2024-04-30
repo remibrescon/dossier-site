@@ -1,0 +1,86 @@
+---
+title: "C'est quoi Pandas ?"
+---
+
+### 2. Pandas
+Le module `pandas` est une bibliothèque de programmation Python extrêmement populaire, utilisée principalement pour l'analyse de données. Elle fournit des structures de données puissantes et flexibles conçues pour travailler facilement avec des données structurées (comme les tableaux et les séries temporelles) de manière intuitive et efficace. Voici quelques aspects clés de `pandas` :
+
+1. **Structures de données principales** : 
+     - **Series** : une colonne dans un DataFrame. C'est similaire à une liste en Python, mais avec des fonctionnalités supplémentaires offertes par `pandas`.
+     - **DataFrame** : une structure de données tabulaire avec des lignes et des colonnes étiquetées. C'est similaire à une feuille de calcul Excel ou à une table SQL.
+ 
+
+2. **Manipulation de données** : 
+   - Vous pouvez effectuer des opérations courantes de manipulation de données telles que le tri, le filtrage, la fusion, la jointure et la concaténation.
+   - `pandas` est excellent pour gérer des données manquantes, remplacer des valeurs, grouper des données, etc.
+
+
+3. **Analyse de données**  
+   Pandas permet de faire de l'analyse de donnée:
+   - Il offre des outils pour l'exploration de données, comme le calcul de statistiques et la visualisation.
+   - Vous pouvez facilement agir sur chaque colonne d'un DataFrame, par exemple pour appliquer des fonctions mathématiques ou de résumé statistique.
+
+Pandas permet également de lire plusieurs de format de fichier differents comme CSV, HTML, SQL,...
+  
+**Mise en pratique**
+Pour commencer avec Pandas vous aurez besoin de l'installer, pour cela il faudra :
+              "pip install pandas" Dans le terminal
+Une fois installé on va devoir l'importer dans python:
+              " import pandas as pd"
+
+Pour importer un fichier CSV nous pouvons l'importer comme ca:
+        - games = pd.read_csv("../data/vgsalesGlobale.csv") # dans les parenthèses mettre le chemin vers votre fichier à importer              
+
+Pour commencer nous allons voir les series
+exemple:
+
+```{python}
+# pip install pandas
+import pandas as pd
+
+all = pd.Series([29,"remi", 1.77, "hello"])
+print(all)
+```
+
+Nous allons voir ensuite les DataFrame
+
+exemple:
+
+```{python}
+import pandas as pd
+
+Jeux = [
+         ["GameBoy", 1983,"Tetris"],
+         ["Playstation", 1994,"Call-of-duty"],
+         ["GameBoy-ADV",2001, "Emeraude"],
+         ["XBox", 2001, "Farming-simulator"]
+]
+
+columns = ['Console', 'Annee', 'Titre']
+df = pd.DataFrame(Jeux, columns=columns)
+df.head()
+```
+
+Une fois le DataFrame crée nous pouvons chercher les informations qui nous interesse. 
+Par exemple dans le DatAFrame nous pouvons cherhcer plusieur chose comme:
+
+   - df.Titre.value_counts().head()  # Permet de compter dans 'titre' combien de fois se répète les titres des jeux
+
+
+```{python}  
+ df.Titre.value_counts().head()
+```
+
+- pd.crosstab(df.Annee, df.Titre) # Permet de créer un tableau qui selectionne les 'Annee'des titre sortie par les 'Titre'
+
+```{python}
+ pd.crosstab(df.Annee, df.Titre)
+```
+
+- Pour visualiser une seule colonne on peut:
+       df["Titre"] 
+
+```{python}
+ df["Titre"] 
+```
+

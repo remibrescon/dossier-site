@@ -1,0 +1,58 @@
+---
+title: "Data visualisation"
+---
+
+## 1. La Data Visualisation c'est quoi?
+
+La visualisation de données en Python, c'est l'art de représenter des informations complexes sous forme de graphiques, de tableaux ou d'autres éléments visuels faciles à comprendre. En utilisant des bibliothèques comme Matplotlib, Seaborn ou Plotly, les développeurs peuvent transformer des données brutes en visualisations attrayantes et informatives, ce qui permet à quiconque, même sans connaissances techniques avancées, de tirer des conclusions à partir des données.
+
+**Import des bibliotheques utile pour la Data Visualisation**
+   Pour faire de la Data Visualisation de nos données nous avons besoins d'importer "Matplotlib"
+
+ il ets possible de faire plusieurs graphiques differents:
+  - histogramme = "hist" -> plt.hist("les données utile sur les axes")
+  - diagramme en barre = "bar" -> plt.bar("les données utile sur les axes")
+  - boite a moustache =" boxplot" -> plt.boxplot("les données utile sur les axes")
+  - nuage de point = "scatterplot" -> plt.scatter("les données utile sur les axes")
+
+  Pour les graphiques d'un dataframe il faut mettre "df.plot.(plus le nom du graphique besoins)", par exemple pour une boite a moustache on mettra "df.plot.box".
+
+ Nous allons voir le diagramme en barre 
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+**On utilisera la meme base de donnée que pour l'introduction afin de crée le graphique**
+
+```{python}
+Jeux = [
+    ["GameBoy", 1500, "Tetris"],
+    ["Playstation", 1994, "Call-of-duty"],
+    ["GameBoy-ADV", 520, "Emeraude"],
+    ["XBox", 2001, "Farming-simulator"]
+]
+columns = ['Console', 'Annee', 'Titre']
+
+df = pd.DataFrame(Jeux, columns=columns)
+
+# Permet de generer un graphique en bar
+df.plot.bar( x='Console', y='Annee')
+```   
+
+On peut egalement mettre un titre general et sur les axes X et Y du graphique et changer la couleur 
+
+```{python}
+# Permet de generer un graphique en bar
+df.plot.bar( x='Console', y='Annee', color='skyblue')
+
+# permet de modifier le titre et le nom des axes
+plt.xlabel('Console')
+plt.ylabel('Année de sortie')
+plt.title('Consoles de jeux vidéo par année de sortie')
+```
+
+Regardons la boite a moustache
+```{python}
+df.plot.box( x='Console', y='Annee')
+```
