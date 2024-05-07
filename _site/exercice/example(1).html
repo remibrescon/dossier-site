@@ -19,56 +19,177 @@
 <body>
   <div class="exercise">
     <div class="title">
-      <h2>This is an python exercise with a plot</h2>
+      <h2></h2>
+      <p>créez une suite de chiffre(2,5,7,9) puis la multiplier par 10  </p>
     </div>
 
     <div data-datacamp-exercise data-lang="python" data-height="auto">
       <code data-type="pre-exercise-code"></code>
       <code data-type="sample-code">
-        import pandas as pd
-        import numpy as np
-        import matplotlib.pyplot as plt
-
-          
+       import numpy as np
+     
       </code>
-      <code data-type="solution"></code>
-      <code data-type="sct"></code>
-      <div data-type="hint">Just press 'Run'.</div>
+      <code data-type="solution"> 
+      import numpy as np
+      a = np.array([2, 5, 7, 9])  
+      result = np.multiply(a, 10)  
+      print(result)
+      </code>
+      <code data-type="sct">Ex().check_object('result').has_equal_value()</code>
+     
+      <div data-type="hint"> pense a utiliser la fonction np.multiply.</div>
+
+      <div class="exercise">
+        <div class="title">
+          <h2>HeatMap avec Seaborn</h2>
+        </div>
+        <div data-datacamp-exercise data-lang="python" data-height="500">
+          <code data-type="sample-code">
+            import seaborn as sns
+            import matplotlib.pyplot as plt
+            import numpy as np
+      
+            # Créer une Heatmap avec ces données
+            np.random.seed(10)
+            data = np.random.rand(7, 5)
+          </code>
+          <code data-type="solution">
+            import seaborn as sns
+            import matplotlib.pyplot as plt
+            import numpy as np
+      
+            np.random.seed(10)
+            data = np.random.rand(7, 5)
+            sns.heatmap(data)
+            plt.title('Heatmap')
+            plt.show()
+          </code>
+          <code data-type="sct">
+            test_function("seaborn.heatmap", args=["data"])
+            test_function("matplotlib.pyplot.title")
+            test_function("matplotlib.pyplot.title", args=["Heatmap"])
+            test_function("matplotlib.pyplot.show")
+            success_msg("Génial! Vous avez réussi à faire une heatmap avec Python !")
+          </code>
+          <div data-type="hint">
+            Utilisez la fonction <code>sns.heatmap()</code> pour créer la heatmap à partir de votre matrice de données. N'oubliez pas d'ajouter un titre avec <code>plt.title()</code> et d'afficher le graphique avec <code>plt.show()</code>.
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="exercise">
+        <div class="title">
+          <h2>création tableau</h2>
+          <p>créez un tableau random de 10 par 5  </p>
+        </div>
+    
+        <div data-datacamp-exercise data-lang="python" data-height="auto">
+          <code data-type="pre-exercise-code"></code>
+          <code data-type="sample-code">
+           import numpy as np
+         
+          </code>
+          <code data-type="solution"> 
+            import numpy as np
+            c = np.random.randint(low=0, high=10, size=(10, 5))
+            print(c)
+
+          </code>
+          <code data-type="sct">
+            test_function("numpy.random.randint", args=["low=0, high=10, size=(10, 5)"])
+            success_msg("Génial! Vous avez réussi")         
+            </code>
+         
+          <div data-type="hint"> pense a utiliser la fonction .</div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
     </div>
   </div>
   <div class="exercise">
     <div class="title">
-      <h2>How it works</h2>
+      <h2></h2>
+      <p>créez un tableau random de 10 lignes et 5 colonnes  </p>
     </div>
-    <div data-datacamp-exercise data-lang="r" data-height="500">
-      <code data-type="pre-exercise-code"># no pec</code>
+
+    <div data-datacamp-exercise data-lang="python" data-height="auto">
+      <code data-type="pre-exercise-code"></code>
       <code data-type="sample-code">
-        # Calculate 3 + 4
-        3 + 4
-
-        # Calculate 6 + 12
+       import numpy as np
+     
       </code>
-      <code data-type="solution">
-        # Calculate 3 + 4
-        3 + 4
-
-        # Calculate 6 + 12
-        6 + 12</code>
+      <code data-type="solution"> 
+      import numpy as np
+      resultat = np.random.randint(low=0, high=10, size=(10, 5))
+      print(resultat)
+      </code>
       <code data-type="sct">
-        test_output_contains(&quot;18&quot;, incorrect_msg = &quot;Make sure to add `6 + 12`
-        on
-        a new line. Do not start the line with a `#`, otherwise your R code is not executed!&quot;)
-        success_msg(&quot;Awesome! See how the console shows the result of the R code you
-        submitted? Now that you&#39;re familiar with the interface, let&#39;s get down to R
-        business!&quot;)
-      </code>
-      <div data-type="hint">
-        <p>Just add a line of R code that calculates the sum of 6 and 12, just like the
-          example
-          in the sample code!</p>
+        Ex().has_import("numpy")
+        Ex().check_function("np.random.randint").multi(1).has_equal_ast()
+        Ex().check_function("print").multi(1).has_equal_ast()
+        Ex().check_object("resultat").has_equal_value()
+
+        </code>
+     
+      <div data-type="hint"> utlise np.random.randint</div>
       </div>
     </div>
-  </div>
+  
 
   <div class="exercise">
     <div class="title">
@@ -82,7 +203,7 @@
                                     msg='Use `cd ..` to go up a level or `cd ~` to return home.')
       </code>
     </div>
-  </div>
+  
 
   <div class="exercise">
     <div class="title">
