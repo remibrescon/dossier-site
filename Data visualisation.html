@@ -142,10 +142,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./Exercice.html"> 
 <span class="menu-text">exercice</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Corrige.qmd"> 
-<span class="menu-text">Corrige</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -192,15 +188,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="la-data-visualisation-cest-quoi">1. La Data Visualisation c’est quoi?</h2>
 <p>La visualisation de données en Python, c’est l’art de représenter des informations complexes sous forme de graphiques, de tableaux ou d’autres éléments visuels faciles à comprendre. En utilisant des bibliothèques comme Matplotlib, Seaborn ou Plotly, les développeurs peuvent transformer des données brutes en visualisations attrayantes et informatives, ce qui permet à quiconque, même sans connaissances techniques avancées, de tirer des conclusions à partir des données.</p>
 <p><strong>Import des bibliotheques utile pour la Data Visualisation</strong> Pour faire de la Data Visualisation de nos données nous avons besoins d’importer “Matplotlib”</p>
-<p>il ets possible de faire plusieurs graphiques differents: - histogramme = “hist” -&gt; plt.hist(“les données utile sur les axes”) - diagramme en barre = “bar” -&gt; plt.bar(“les données utile sur les axes”) - boite a moustache =” boxplot” -&gt; plt.boxplot(“les données utile sur les axes”) - nuage de point = “scatterplot” -&gt; plt.scatter(“les données utile sur les axes”)</p>
-<p>Pour les graphiques d’un dataframe il faut mettre “df.plot.(plus le nom du graphique besoins)”, par exemple pour une boite a moustache on mettra “df.plot.box”.</p>
+<p>il ets possible de faire plusieurs graphiques differents:</p>
+<ul>
+<li><p>histogramme = “hist” -&gt; plt.hist(“les données utile sur les axes”)</p></li>
+<li><p>diagramme en barre = “bar” -&gt; plt.bar(“les données utile sur les axes”)</p></li>
+<li><p>boite a moustache =” boxplot” -&gt; plt.boxplot(“les données utile sur les axes”)</p></li>
+<li><p>nuage de point = “scatterplot” -&gt; plt.scatter(“les données utile sur les axes”)</p>
+<p>Pour les graphiques d’un dataframe il faut mettre “df.plot.(plus le nom du graphique besoins)”, par exemple pour une boite a moustache on mettra “df.plot.box”.</p></li>
+</ul>
 <p>Nous allons voir le diagramme en barre</p>
-<div id="52b5f50a" class="cell" data-execution_count="1">
+<div id="d3bb210c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong>On utilisera la meme base de donnée que pour l’introduction afin de crée le graphique</strong></p>
-<div id="cea33b1e" class="cell" data-execution_count="2">
+<div id="48afd53e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Jeux <span class="op">=</span> [</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"GameBoy"</span>, <span class="dv">1500</span>, <span class="st">"Tetris"</span>],</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Playstation"</span>, <span class="dv">1994</span>, <span class="st">"Call-of-duty"</span>],</span>
@@ -222,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>On peut egalement mettre un titre general et sur les axes X et Y du graphique et changer la couleur</p>
-<div id="1d5ae7e0" class="cell" data-execution_count="3">
+<div id="fe504f42" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Permet de generer un graphique en bar</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.plot.bar( x<span class="op">=</span><span class="st">'Console'</span>, y<span class="op">=</span><span class="st">'Annee'</span>, color<span class="op">=</span><span class="st">'skyblue'</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -242,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Regardons la boite a moustache</p>
-<div id="654b30fa" class="cell" data-execution_count="4">
+<div id="05e784b1" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.plot.box( x<span class="op">=</span><span class="st">'Console'</span>, y<span class="op">=</span><span class="st">'Annee'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
