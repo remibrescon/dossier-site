@@ -1,44 +1,17 @@
 {
-  "about.qmd": {
-    "about.html": "b93185fa"
-  },
-  "index.qmd": {
-    "index.html": "817350e3"
-  },
-  "C'est quoi Pandas.QMD": {
-    "C'est quoi Pandas.html": "ca50d85e"
-  },
-  "c'est quoi pandas.QMD": {
-    "c'est quoi pandas.html": "3d741675"
-  },
-  "c'est quoi pandas.qmd": {
-    "c'est quoi pandas.html": "5e1f2c0a"
-  },
-  "c_est_quoi_pandas.qmd": {
-    "c_est_quoi_pandas.html": "2877b3ca"
-  },
-  "c_est_quoi_Pandas.qmd": {
-    "c_est_quoi_Pandas.html": "fcf9d3d8"
-  },
-  "Sommaire.qmd": {
-    "Sommaire.html": "0292652c"
-  },
-  "c_est_quoi_Pandas.ipynb": {
-    "c_est_quoi_Pandas.html": "00ba6224"
-  },
-  "Introduction a Pandas.qmd": {
-    "Introduction a Pandas.html": "95b9b13b"
-  },
-  "Corriges.qmd": {
-    "Corriges.html": "3f1abbdf"
-  },
   "Data visualisation.qmd": {
-    "Data visualisation.html": "b1d5ea39"
+    "Data visualisation.html": "c98a60c3"
   },
   "Exercice.qmd": {
-    "Exercice.html": "2126de22"
+    "Exercice.html": "1a161fb7"
   },
   "introduction a numpy.qmd": {
-    "introduction a numpy.html": "2cfa190a"
+    "introduction a numpy.html": "56cf11fd"
+  },
+  "Introduction a Pandas.qmd": {
+    "Introduction a Pandas.html": "7ca50f27"
+  },
+  "Sommaire.qmd": {
+    "Sommaire.html": "fdeb4517"
   }
 }

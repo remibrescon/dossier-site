@@ -102,10 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-
-
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-
 
 
 <link rel="stylesheet" href="styles.css">
@@ -148,10 +145,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./Exercice.html"> 
 <span class="menu-text">exercice</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Corrige.qmd"> 
-<span class="menu-text">Corrige</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -168,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pandas" id="toc-pandas" class="nav-link active" data-scroll-target="#pandas">2. Pandas</a></li>
+  <li><a href="#cest-quoi-pandas" id="toc-cest-quoi-pandas" class="nav-link active" data-scroll-target="#cest-quoi-pandas">1. C’est quoi pandas ?</a></li>
   </ul>
 </nav>
     </div>
@@ -194,9 +187,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="pandas" class="level3">
-<h3 class="anchored" data-anchor-id="pandas">2. Pandas</h3>
-<p>Le module <code>pandas</code> est une bibliothèque de programmation Python extrêmement populaire, utilisée principalement pour l’analyse de données. Elle fournit des structures de données puissantes et flexibles conçues pour travailler facilement avec des données structurées (comme les tableaux et les séries temporelles) de manière intuitive et efficace. Voici quelques aspects clés de <code>pandas</code> :</p>
+<section id="cest-quoi-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="cest-quoi-pandas">1. C’est quoi pandas ?</h2>
+<p>Pandas est un bibliotheque utiliser dans python utilisé pour l’analyse de donnée. Elle offre des structures de données flexibles et puissantes pour travailler avec des données tabulaires et temporelles. Voici quelques points clés à retenir sur Pandas :</p>
+<p>Structures de données principales : - DataFrame : Un tableau bidimensionnel avec des lignes et des colonnes étiquetées, similaire à une feuille de calcul Excel ou à une table SQL. - Series : Une structure unidimensionnelle similaire à un tableau ou une liste, mais avec des fonctionnalités supplémentaires, comme un index.</p>
+<p>Pandas est largement utilisé dans le domaine de la science des données, de l’analyse de données, de la finance et de nombreux autres domaines où la manipulation et l’analyse de données sont nécessaires.</p>
+<p>Pandas est un bibliotheque utiliser dans python utilisé pour l’analyse de donnée. Elle offre des structures de données flexibles et puissantes pour travailler avec des données tabulaires et temporelles. Voici quelques points clés à retenir sur Pandas :</p>
+<p>Structures de données principales : - DataFrame : Un tableau bidimensionnel avec des lignes et des colonnes étiquetées, similaire à une feuille de calcul Excel ou à une table SQL. - Series : Une structure unidimensionnelle similaire à un tableau ou une liste, mais avec des fonctionnalités supplémentaires, comme un index.</p>
+<p>Pandas est largement utilisé dans le domaine de la science des données, de l’analyse de données, de la finance et de nombreux autres domaines où la manipulation et l’analyse de données sont nécessaires. ### 2. Pandas Le module <code>pandas</code> est une bibliothèque de programmation Python extrêmement populaire, utilisée principalement pour l’analyse de données. Elle fournit des structures de données puissantes et flexibles conçues pour travailler facilement avec des données structurées (comme les tableaux et les séries temporelles) de manière intuitive et efficace. Voici quelques aspects clés de <code>pandas</code> :</p>
 <ol type="1">
 <li><strong>Structures de données principales</strong> :
 <ul>
@@ -219,7 +217,7 @@ Pandas permet de faire de l’analyse de donnée:
 <p><strong>Mise en pratique</strong> Pour commencer avec Pandas vous aurez besoin de l’installer, pour cela il faudra : “pip install pandas” Dans le terminal Une fois installé on va devoir l’importer dans python: ” import pandas as pd”</p>
 <p>Pour importer un fichier CSV nous pouvons l’importer comme ca: - games = pd.read_csv(“../data/vgsalesGlobale.csv”) # dans les parenthèses mettre le chemin vers votre fichier à importer</p>
 <p>Pour commencer nous allons voir les series exemple:</p>
-<div id="ac84013e" class="cell" data-execution_count="1">
+<div id="46e63251" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install pandas</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -235,7 +233,7 @@ dtype: object</code></pre>
 </div>
 <p>Nous allons voir ensuite les DataFrame</p>
 <p>exemple:</p>
-<div id="17dd889d" class="cell" data-execution_count="2">
+<div id="3c4e9270" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Jeux <span class="op">=</span> [</span>
@@ -298,7 +296,7 @@ dtype: object</code></pre>
 <ul>
 <li>df.Titre.value_counts().head() # Permet de compter dans ‘titre’ combien de fois se répète les titres des jeux</li>
 </ul>
-<div id="7d2aa084" class="cell" data-execution_count="3">
+<div id="bea76d2f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a> df.Titre.value_counts().head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>Titre
@@ -312,7 +310,7 @@ Name: count, dtype: int64</code></pre>
 <ul>
 <li>pd.crosstab(df.Annee, df.Titre) # Permet de créer un tableau qui selectionne les ‘Annee’des titre sortie par les ’Titre’</li>
 </ul>
-<div id="2794ba61" class="cell" data-execution_count="4">
+<div id="2e557f24" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a> pd.crosstab(df.Annee, df.Titre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
@@ -368,7 +366,7 @@ Name: count, dtype: int64</code></pre>
 <ul>
 <li>Pour visualiser une seule colonne on peut: df[“Titre”]</li>
 </ul>
-<div id="1b0f1d5f" class="cell" data-execution_count="5">
+<div id="33e9aea2" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a> df[<span class="st">"Titre"</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>0               Tetris

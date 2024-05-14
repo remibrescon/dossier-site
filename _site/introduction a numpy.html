@@ -142,10 +142,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./Exercice.html"> 
 <span class="menu-text">exercice</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Corrige.qmd"> 
-<span class="menu-text">Corrige</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -209,7 +205,7 @@ et de sons en raison de sa capacité à manipuler efficacement des tableaux mult
 <p>En résumé, NumPy est une bibliothèque essentielle pour les applications nécessitant des calculs numériques rapides et efficaces en Python, tels que le calcul scientifique, l’apprentissage automatique, l’analyse de données, etc.</p>
 <p><strong>mise a pratique numpy:</strong> Pour commencer avec numpy vous aurez besoin de l’installer, pour cela il faudra : “pip install numpy” Dans le terminal Une fois installé on va devoir l’importer dans python: “import numpy as np”</p>
 <p>Les tableaux (en anglais, array) peuvent être créés avec numpy.array(). On utilise des crochets pour délimiter les listes d’éléments dans les tableaux.</p>
-<div id="5d061f0f" class="cell" data-execution_count="1">
+<div id="c8dc7585" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install numpy</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>A<span class="op">=</span> np.array([<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">3</span>,<span class="dv">9</span>])</span>
@@ -219,7 +215,7 @@ et de sons en raison de sa capacité à manipuler efficacement des tableaux mult
 </div>
 </div>
 <p>il est possible de crée un tableau 2D:</p>
-<div id="dc94a458" class="cell" data-execution_count="2">
+<div id="25a4096e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>], [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>]])</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -228,24 +224,24 @@ et de sons en raison de sa capacité à manipuler efficacement des tableaux mult
 </div>
 </div>
 <p>On peut crée des tableau avec numpy en utilisant: np.random.randint</p>
-<div id="3c7ef540" class="cell" data-execution_count="3">
+<div id="c70ca0d0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> np.random.randint(low<span class="op">=</span><span class="dv">0</span>, high<span class="op">=</span><span class="dv">10</span>, size<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[8 7 9 4 4]
- [7 5 6 3 8]
- [2 7 3 2 9]
- [7 0 7 3 2]
- [9 0 4 6 3]
- [4 5 2 7 7]
- [2 3 6 5 8]
- [7 7 4 4 0]
- [1 2 9 5 0]
- [7 1 3 5 4]]</code></pre>
+<pre><code>[[9 0 2 1 9]
+ [8 7 4 5 1]
+ [6 6 8 3 7]
+ [7 5 2 6 9]
+ [8 8 7 3 7]
+ [5 8 2 4 6]
+ [5 5 7 6 9]
+ [0 2 1 3 0]
+ [9 8 5 7 6]
+ [0 5 3 5 2]]</code></pre>
 </div>
 </div>
 <p>On peut crée créer des tableaux avec des valeurs dans un intervalle spécifié en utilisant La fonction: <code>numpy.arange</code></p>
-<div id="2484574d" class="cell" data-execution_count="4">
+<div id="e4288ca3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">3</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -255,7 +251,7 @@ et de sons en raison de sa capacité à manipuler efficacement des tableaux mult
 </div>
 <p>on peut utiliser plusieurs fonction arithmetique, “np.add(),np.subtract(),np.multiply(),np.divide(),np.power()” voici 2 example:</p>
 <p>multiplication</p>
-<div id="df446b55" class="cell" data-execution_count="5">
+<div id="6d7eec02" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> np.multiply(a, <span class="dv">5</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result) </span>
@@ -269,7 +265,7 @@ et de sons en raison de sa capacité à manipuler efficacement des tableaux mult
 </div>
 </div>
 <p>Nous pouvons aussi utiliser la trigonometrie: “np.sin(),np.cos(),np.tan()”</p>
-<div id="b2fe8a8e" class="cell" data-execution_count="6">
+<div id="6e0a5a76" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>angles <span class="op">=</span> np.array([<span class="dv">0</span>, np.pi<span class="op">/</span><span class="dv">2</span>, np.pi])</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>sin_values <span class="op">=</span> np.tan(angles)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sin_values)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -278,7 +274,7 @@ et de sons en raison de sa capacité à manipuler efficacement des tableaux mult
 </div>
 </div>
 <p>Pour les fonction statistique nous utilisons: np.mean(),np.median(),np.std()</p>
-<div id="4b2e03bb" class="cell" data-execution_count="7">
+<div id="2754e17d" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">10</span>])</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> np.mean(E)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(E) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -287,7 +283,7 @@ et de sons en raison de sa capacité à manipuler efficacement des tableaux mult
 </div>
 </div>
 <p>Pour en finir avec numpy nous pouvons arrondir les nombres avec: np.round(),np.floor(),np.ceil()</p>
-<div id="26f37548" class="cell" data-execution_count="8">
+<div id="d66c64e9" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>F<span class="op">=</span> np.array([np.pi<span class="op">*</span><span class="dv">2</span>,np.pi])</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>F <span class="op">=</span> np.<span class="bu">round</span>(F)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(F) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

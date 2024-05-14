@@ -17,9 +17,7 @@ website:
       - href: Data visualisation.qmd
         text: Data visualisation 
       - href: Exercice.qmd
-        text: exercice
-      - href: Corrige.qmd
-        text: Corrige    
+        text: exercice 
 
 
 format:
